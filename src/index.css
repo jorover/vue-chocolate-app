@@ -1,0 +1,394 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 85%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.topBar {
+  width: 100%;
+}
+
+.topNav {
+  width: 45%;
+}
+
+.socialIcons img {
+  width: 25px;
+  height: 25px;
+  margin-left: 7px;
+}
+
+.hamburgerMenu {
+  height: 200px;
+  display: none;
+}
+
+.hamburgerMenu,
+.sideDropMenu {
+  width: 100%;
+}
+
+.hamburgerMenu img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.hamburgerMenu img:hover {
+  transform: scale(1.1);
+  transform: rotate(-180deg);
+}
+
+.sideDropMenu {
+  margin-top: 35px;
+  transition: 0.2s;
+}
+
+.openCloseMenu .sideDropMenu {
+  height: inherit;
+}
+
+.mainMenu li {
+  cursor: pointer;
+}
+
+.mainMenu li:hover {
+  color: rgb(255, 196, 0);
+}
+
+.sideDropMenu {
+  height: 0px;
+  overflow: hidden;
+}
+
+.mainMenu {
+  height: inherit;
+}
+
+#carouselDarkVariant {
+  min-height: 600px;
+}
+
+.carousel-first-img,
+.carousel-second-img,
+.carousel-third-img,
+.showCaseSection,
+.cateringSection {
+  width: 100%;
+  min-height: 650px;
+}
+
+.carousel-first-img {
+  background: url('../src/assets/ch1.jpeg') no-repeat center center/cover;
+}
+
+.carousel-second-img {
+  background: url('../src/assets/ch2.jpeg') no-repeat center center/cover;
+}
+
+.carousel-third-img {
+  background: url('../src/assets/ddc.jpg') no-repeat center center/cover;
+}
+
+.carousel-caption {
+  top: 250px;
+  height: fit-content;
+}
+
+.chefSection {
+  min-height: 500px;
+}
+
+.chefSection img {
+  max-width: 400px;
+  height: 550px;
+}
+
+.chefText {
+  width: 57%;
+}
+
+.brandDataSection {
+  width: 95%;
+}
+
+.brandDataGallery::after {
+  content: '';
+  border: 1px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: #000000;
+  opacity: 0.7;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.brandDataGallery img {
+  width: 100%;
+  height: 180px;
+}
+
+.brandbtn {
+  top: 100px;
+  left: 60px;
+  cursor: pointer;
+}
+
+.brandDataGallery:hover .brandbtn {
+  visibility: visible;
+}
+
+.showCaseText {
+  color: #fff;
+  width: 100%;
+  margin: 250px 0px;
+}
+
+.cateringText {
+  width: 40%;
+}
+
+.cateringImg {
+  width: fit-content;
+}
+
+.footerSection {
+  min-height: 350px;
+}
+
+@media (max-width: 1200px) {
+  .beansContent {
+    flex-direction: column;
+  }
+
+  .beansImg {
+    width: 60%;
+  }
+
+  .beansText {
+    width: 80%;
+  }
+
+  .beansImg,
+  .beansText {
+    margin: auto;
+  }
+}
+
+@media (max-width: 1025px) {
+  .topNav {
+    width: 60%;
+  }
+
+  .brandDataSection {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .cateringContainer {
+    flex-direction: column;
+  }
+
+  .cateringText,
+  .beansImg,
+  .beansText {
+    width: 75%;
+  }
+
+  .cateringText,
+  .cateringImg {
+    margin: auto;
+  }
+}
+
+@media (max-width: 950px) {
+  .brandDataSection {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 855px) {
+  .chefText {
+    padding: 10px;
+    margin: 30px 0px;
+  }
+
+  .beansImg {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .topNav,
+  .socialIcons {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: block;
+  }
+
+  .carousel-item h1 {
+    font-size: 3rem;
+  }
+
+  .chefContent {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .chefImg,
+  .chefText {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .beansImg,
+  .beansText {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .brandDataSection {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .cateringImg {
+    grid-template-columns: auto auto;
+  }
+
+  .beansImg {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .carousel-item h1 {
+    font-size: 2.6rem;
+  }
+
+  .chefImg,
+  .chefText {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .carousel-caption h1 {
+    font-size: 2.2rem;
+  }
+
+  .carousel-caption button {
+    padding: 7px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .carousel-caption h1 {
+    font-size: 1.9rem;
+  }
+
+  .carousel-caption button {
+    padding: 5px;
+    font-size: 0.7rem;
+  }
+
+  .carousel-caption {
+    padding: 20px;
+    margin: 20px 0px;
+  }
+  .brandDataSection {
+    grid-template-columns: auto;
+  }
+
+  .brandDataGallery img,
+  .brandDataGallery::after {
+    width: 70%;
+  }
+
+  .brandDataGallery img,
+  .brandbtn {
+    margin-left: 15%;
+  }
+
+  .brandbtn {
+    margin-left: 25%;
+  }
+
+  .brandDataGallery::after {
+    left: 15%;
+  }
+
+  .cateringText {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .cateringImg {
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .carousel-caption h1 {
+    font-size: 1.6rem;
+  }
+
+  .carousel-caption {
+    padding: 10px;
+    margin: 30px 0px;
+  }
+
+  .chefImg,
+  .chefText {
+    width: 100%;
+  }
+
+  .brandDataGallery img,
+  .brandDataGallery::after {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+  }
+
+  .brandbtn {
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 310px) {
+  .carousel-caption h1 {
+    font-size: 1.4rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-caption {
+    padding: 7px;
+  }
+}
